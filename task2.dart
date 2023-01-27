@@ -7,11 +7,11 @@ void main() {
 
 String getGrade(int marks) {
   String grades;
-  if (marks > 80) {
+  if (marks >= 80) {
     grades = 'A';
-  } else if (marks > 70) {
+  } else if (marks >= 70) {
     grades = 'B';
-  } else if (marks > 60) {
+  } else if (marks >= 60) {
     grades = 'c';
   } else {
     grades = 'f';
