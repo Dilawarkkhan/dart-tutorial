@@ -1,16 +1,34 @@
+import 'dart:io';
 
 void main() {
+  int getUserInput = int.parse(stdin.readLineSync()!);
+  String studentGrade = getGrade(getUserInput);
+  String studentMessage = getMessage(studentGrade);
+  print(studentMessage);
 }
 
-//TODO: Make the following function with switch statement
 String getMessage(String grade) {
-  //If grade is A return Excellent
-  //If grade is B return Good
-  //If grade is C return Fair
-  //If grade is D return Poor
-  //If grade is F return Fail
+  String message;
 
-  return '';
+  switch (grade) {
+    case 'A':
+      message = "Excellent";
+      break;
+    case 'B':
+      message = 'Good';
+      break;
+    case 'C':
+      message = 'Fair';
+
+      break;
+    case 'D':
+      message = 'Poor';
+      break;
+
+    default:
+      message = 'Fail';
+  }
+  return message;
 }
 
 String getGrade(int marks) {
@@ -28,4 +46,3 @@ String getGrade(int marks) {
   }
   return grades;
 }
- 
