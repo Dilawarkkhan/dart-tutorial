@@ -1,13 +1,20 @@
-void main(){
-  //TODO: Create a program to calculate grade of the student
+import 'dart:io';
 
-  //TODO: Take input from user in integers
-
-  print(getGrade(100));
+void main() {
+  int userInput = int.parse(stdin.readLineSync().toString());
+  print(getGrade(userInput));
 }
 
-
-//TODO: Complete the function
-String getGrade(int marks){
-  return '';
+String getGrade(int marks) {
+  String grades;
+  if (marks > 80) {
+    grades = 'A';
+  } else if (marks > 70) {
+    grades = 'B';
+  } else if (marks > 60) {
+    grades = 'c';
+  } else {
+    grades = 'f';
+  }
+  return grades;
 }
