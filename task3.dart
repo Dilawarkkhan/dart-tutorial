@@ -24,9 +24,11 @@ String getMessage(String grade) {
     case 'D':
       message = 'Poor';
       break;
-
-    default:
+    case 'F':
       message = 'Fail';
+      break;
+    default:
+      message = 'Invalid';
   }
   return message;
 }
