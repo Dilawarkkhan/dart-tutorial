@@ -3,6 +3,8 @@ import 'dart:io';
 void main() {
   int userInput = int.parse(stdin.readLineSync().toString());
   print(getGrade(userInput));
+
+  switch ()
 }
 
 //TODO: Make the following function with switch statement
@@ -19,3 +21,4 @@ String getGrade(int marks) {
   }
   return grades;
 }
+ 
