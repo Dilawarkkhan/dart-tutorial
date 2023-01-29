@@ -4,3 +4,46 @@
 // take two values from user
 // print result
 // loops, switch statements will be used.
+
+import 'dart:io';
+
+void main(){
+     print('Please select the operator + - * /');
+      String userInput = stdin.readLineSync()!;
+        print ( 'enter the first number');
+        int num1 = int.parse(stdin.readLineSync()!);
+        print('Enter the second number');
+        int num2 = int.parse(stdin.readLineSync()!);
+        
+        int result;
+
+       for (int i = 1; i <= 1; i++) {
+
+        switch (userInput) {
+          case "+":
+              result = num1  + num2;
+            break;
+            case "-":
+              result = num1 - num2;
+            break;
+            case "/":
+              result = num1 ~/ num2;
+            break;
+            case "*":
+              result = num1 * num2;
+            break;
+          default:
+           print ( "invild number");
+          return;     
+        }
+        print(result);
+       }
+
+     }
+     
+   
+
+
+    
+
+
