@@ -1,4 +1,4 @@
-// Operator: (+ - * /): 
+// Operator: (+ - * /):
 // take input from user (if user enters stop then stop the programs) hint: loop
 // if user enters something beside the given inputs print('invalid input, please try again'); and restart the program
 // take two values from user
@@ -7,43 +7,35 @@
 
 import 'dart:io';
 
-void main(){
-     print('Please select the operator + - * /');
-      String userInput = stdin.readLineSync()!;
-        print ( 'enter the first number');
-        int num1 = int.parse(stdin.readLineSync()!);
-        print('Enter the second number');
-        int num2 = int.parse(stdin.readLineSync()!);
-        
-        int result;
+void main() {
+  while (true) {
+    print("Please choose an operator (+ - * /) ");
+    String userInput = stdin.readLineSync()!;
+    if (userInput == "stop") break;
 
-       for (int i = 1; i <= 1; i++) {
+    print("Please enter the first value: ");
+    int num1 = int.parse(stdin.readLineSync()!);
+    print("Please enter the second value: ");
+    int num2 = int.parse(stdin.readLineSync()!);
 
-        switch (userInput) {
-          case "+":
-              result = num1  + num2;
-            break;
-            case "-":
-              result = num1 - num2;
-            break;
-            case "/":
-              result = num1 ~/ num2;
-            break;
-            case "*":
-              result = num1 * num2;
-            break;
-          default:
-           print ( "invild number");
-          return;     
-        }
-        print(result);
-       }
-
-     }
-     
-   
-
-
-    
-
-
+    int result;
+    switch (userInput) {
+      case "+":
+        result = num1 + num2;
+        break;
+      case "-":
+        result = num1 - num2;
+        break;
+      case "*":
+        result = num1 * num2;
+        break;
+      case "/":
+        result = num1 ~/ num2;
+        break;
+      default:
+        print("Invalid input, please try again.");
+        continue;
+    }
+    print("Result: $result");
+  }
+}
