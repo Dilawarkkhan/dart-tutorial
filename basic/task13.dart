@@ -12,7 +12,7 @@ void main() {
     
     print(' $n x $i = $sum ');
     i++;
-
+   
   }
 }
 
