@@ -18,6 +18,10 @@ void main() {
   print(ahmedDetails.name);
   print(ahmedDetails.email);
 
+  UserDetails saad = UserDetails(name: 'Saad', email: "saad@gmail.com");
+  print(saad.name);
+  print(saad.email);
+
   UserDetails dilawarDetails = UserDetails(
     name: 'Dilawar',
     email: 'dilawar@gmail.com',

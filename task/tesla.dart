@@ -1,17 +1,27 @@
 import '../task/car.dart';
 
 class Tesla extends Car {
-  // KEEP THIS PRIVATE
   final String _carName = 'Tesla';
 
-  //TODO: Create a getter function for _carName
+  // void set carName(String val) => _carName = val;
+
+  String get carName => _carName;
 
   Tesla({
-    required super.color,
-    required super.mileage,
-    required super.model,
+    super.color,
+    super.mileage,
+    super.model,
   });
 
-  //TODO: Override methods of car class
-  // Print $carname first
+  @override
+  void startCar() {
+    print(_carName);
+    super.startCar();
+  }
+
+  @override
+  void stopCar() {
+    print(_carName);
+    super.stopCar();
+  }
 }

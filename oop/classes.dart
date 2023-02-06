@@ -1,5 +1,4 @@
- 
- class Animal {
+class Animal {
   // static String name = '';
 
   void canRun(Animals animal) {
